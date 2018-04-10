@@ -1,0 +1,6 @@
+framework module Pods_VIPERMarvelApiExample {
+  umbrella header "Pods-VIPERMarvelApiExample-umbrella.h"
+
+  export *
+  module * { export * }
+}
