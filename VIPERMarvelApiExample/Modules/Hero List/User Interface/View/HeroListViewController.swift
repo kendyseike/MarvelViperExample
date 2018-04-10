@@ -43,9 +43,10 @@ class HeroListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func configureView() {
-        tableHeroList.estimatedRowHeight = 0
         tableHeroList.estimatedSectionHeaderHeight = 0
         tableHeroList.estimatedSectionFooterHeight = 0
+        tableHeroList.estimatedRowHeight = 270
+        tableHeroList.rowHeight = UITableViewAutomaticDimension
         
         heightOfTableViewConstraint = NSLayoutConstraint(item: tableHeroList, attribute: .height, relatedBy: .equal, toItem: tableHeroList.superview, attribute: .height, multiplier: 0.0, constant: 1000)
         tableHeroList.superview?.addConstraint(heightOfTableViewConstraint!)
@@ -75,7 +76,7 @@ class HeroListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.showHeroDetailView(hero: heroList[indexPath.row])
     }
-
+    
 }
 
 extension HeroListViewController: HeroListInterface {

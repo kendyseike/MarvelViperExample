@@ -24,7 +24,7 @@ class HeroListTableViewCell: UITableViewCell {
         viewHeroCellContent.layer.cornerRadius = 5
         viewHeroCellContent.layer.borderWidth = 1
         viewHeroCellContent.layer.borderColor = UIColor.black.cgColor
-        
+                
     }
     
     override func awakeFromNib() {
